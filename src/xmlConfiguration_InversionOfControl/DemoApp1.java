@@ -2,14 +2,14 @@ package xmlConfiguration_InversionOfControl;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class XmlConfigurationDemoApp {
+public class DemoApp1 {
 
     public static void main(String[] args) {
 
         // Creating the Spring Container aka
         // Loading the XML Configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("xmlConfiguration_InversionOfControl/xmlConfiguration_InversionOfControl.xml");
+                new ClassPathXmlApplicationContext("xmlConfiguration_InversionOfControl/InversionOfControl.xml");
 
         // Retrieving a bean from the Spring Container
         Book myBook = context.getBean("myBook", Book.class);

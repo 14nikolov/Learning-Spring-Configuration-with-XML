@@ -2,14 +2,21 @@ package xmlConfiguration_DependencyInjection;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class XmlConfigurationDemoApp {
+public class DemoApp2 {
 
     public static void main(String[] args) {
 
         // Creating the Spring Container aka
         // Loading the XML Configuration file
+        //
+        //
+        // These 2 lines of code load the ConstructorDependencyInjection.xml configuration file
+        // ClassPathXmlApplicationContext context =
+        //         new ClassPathXmlApplicationContext("xmlConfiguration_DependencyInjection/ConstructorDependencyInjection.xml");
+        //
+        // These 2 lines of code load the SetterDependencyInjection.xml configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("xmlConfiguration_DependencyInjection/xmlConfiguration_DependencyInjection.xml");
+                new ClassPathXmlApplicationContext("xmlConfiguration_DependencyInjection/SetterDependencyInjection.xml");
 
         // Retrieving a bean from the Spring Container
         Person myPerson = context.getBean("myPerson", Person.class);

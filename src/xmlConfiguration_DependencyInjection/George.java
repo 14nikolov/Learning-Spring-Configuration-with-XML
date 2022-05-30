@@ -5,10 +5,18 @@ public class George implements Person{
     // Book Dependency
     private Book book;
 
+    // Setter Dependency Injection
+    public void setBook(Book book){
+        this.book = book;
+    }
+
     // Constructor Dependency Injection
     public George(Book injectedBook){
         this.book = injectedBook;
     }
+
+    // Default Constructor
+    public George(){}
 
     @Override
     public String getPersonName() {
