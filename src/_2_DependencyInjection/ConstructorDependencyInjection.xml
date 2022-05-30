@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean, representing a "Book" Type of Class -->
+    <bean id="myBook" class="_2_DependencyInjection.BookAtomicHabits"/>
+
+    <!-- Bean, representing a "Person" Type of Class -->
+    <bean id="myPerson" class="_2_DependencyInjection.George">
+        <!-- Constructor Dependency Injection -->
+        <constructor-arg ref="myBook"/>
+    </bean>
+
+</beans> <!-- end beans -->

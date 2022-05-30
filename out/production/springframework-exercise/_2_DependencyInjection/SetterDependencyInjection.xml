@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean, representing a "Book" Type of Class -->
+    <bean id="myBook" class="_2_DependencyInjection.BookAtomicHabits"/>
+
+    <!-- Bean, representing a "Person" Type of Class -->
+    <bean id="myPerson" class="_2_DependencyInjection.George">
+        <!-- Setter Dependency Injection -->
+            <!-- Note about the property's name attribute:
+            When Spring reads name="book", it will search
+            for a setter method called setBook() and pass in the Bean "myBook"-->
+        <property name="book" ref="myBook"/>
+    </bean>
+
+</beans> <!-- end beans -->
